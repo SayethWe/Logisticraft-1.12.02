@@ -36,3 +36,8 @@ gradle-app.setting
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/Logisicraft-1.12.02_Client.launch
+/Logisicraft-1.12.02_Server.launch
+/gradlew
+/gradlew.bat
+/.settings

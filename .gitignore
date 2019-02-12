@@ -41,3 +41,7 @@ hs_err_pid*
 /gradlew
 /gradlew.bat
 /.settings
+/bin/
+/run/
+/Logisticraft_Client.launch
+/Logisticraft_Server.launch

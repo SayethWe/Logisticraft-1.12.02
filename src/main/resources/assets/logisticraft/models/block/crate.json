@@ -1,9 +1,10 @@
 {
     "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
     "textures": {
-        "crateTop": "logisticraft:crateTop",
-        "crateDetail": "logisticraft:crateDetail",
-        "crate": "logisticraft:crate"
+        "crateTop": "logisticraft:block/crate_top",
+        "crateDetail": "logisticraft:block/crate_detail",
+        "crate": "logisticraft:block/crate",
+        "particle":"logisticraft:block/crate_top"
     },
     "display": {
         "gui": {

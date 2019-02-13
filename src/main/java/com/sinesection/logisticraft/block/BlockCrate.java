@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
@@ -20,6 +21,7 @@ public class BlockCrate extends Block {
 		super(Material.WOOD);
 		setUnlocalizedName(Logisticraft.MODID + ".crate");
 		setRegistryName("crate");
+		setCreativeTab(CreativeTabs.DECORATIONS);
 		// TODO Auto-generated constructor stub
 	}
 	

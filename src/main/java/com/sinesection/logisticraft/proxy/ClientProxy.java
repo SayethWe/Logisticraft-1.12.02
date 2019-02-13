@@ -1,5 +1,8 @@
 package com.sinesection.logisticraft.proxy;
 
+import com.sinesection.logisticraft.registrars.ModBlocks;
+import com.sinesection.logisticraft.registrars.ModItems;
+
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,6 +20,7 @@ public class ClientProxy extends CommonProxy {
 
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent e) {
-
+		ModBlocks.initModels();
+		ModItems.initModels();
 	}
 }

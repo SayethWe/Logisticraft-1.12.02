@@ -13,11 +13,11 @@ import net.minecraftforge.items.SlotItemHandler;
 
 public class ContainerCrate extends Container {
 	
-	private static final int inv_y = 85;
-	private static final int inv_x = 18;
+	private static final int inv_y = 84;
+	private static final int inv_x = 17;
 	
-	private static final int slots_y = 18;
-	private static final int slots_x = 9;
+	private static final int slots_y = 17;
+	private static final int slots_x = 8;
 	
 	private TileEntityCrate tileEntity;
 	
@@ -66,15 +66,29 @@ public class ContainerCrate extends Container {
 
 	@Override
 	public ItemStack transferStackInSlot(EntityPlayer playerIn, int index) {
-		ItemStack result = ItemStack.EMPTY;
-		Slot slot = this.inventorySlots.get(index);
-		
-		if (slot != null && slot.getHasStack()) {
-			ItemStack itemStack1 = slot.getStack();
-			result = itemStack1.copy();
-		}
-		
-		return result;
+		ItemStack itemstack = ItemStack.EMPTY;
+        Slot slot = this.inventorySlots.get(index);
+
+        if (slot != null && slot.getHasStack()) {
+            ItemStack itemstack1 = slot.getStack();
+            itemstack = itemstack1.copy();
+
+            if (index < TileEntityCrate.SIZE) {
+                if (!this.mergeItemStack(itemstack1, TileEntityCrate.SIZE, this.inventorySlots.size(), true)) {
+                    return ItemStack.EMPTY;
+                }
+            } else if (!this.mergeItemStack(itemstack1, 0, TileEntityCrate.SIZE, false)) {
+                return ItemStack.EMPTY;
+            }
+
+            if (itemstack1.isEmpty()) {
+                slot.putStack(ItemStack.EMPTY);
+            } else {
+                slot.onSlotChanged();
+            }
+        }
+
+        return itemstack;
 	}
 
 	@Override

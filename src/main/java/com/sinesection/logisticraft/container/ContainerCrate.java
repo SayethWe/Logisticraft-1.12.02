@@ -46,6 +46,9 @@ public class ContainerCrate extends Container {
         }
 	}
 	
+	/**
+	 * add the slots relevant to the Crate to the inventory
+	 */
 	private void addOwnSlots() {
 		IItemHandler itemHandler = this.tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
 		int index = 0;

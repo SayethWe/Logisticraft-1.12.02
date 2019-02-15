@@ -13,9 +13,9 @@ public class TileEntityCrate extends TileEntity {
 	
     public static final int LAYERS = 3;
     public static final int LAYER_SIZE=3;
-    public static final int SIZE = LAYER_SIZE^2*LAYERS;	
+    public static final int SIZE = LAYER_SIZE*LAYER_SIZE*LAYERS;
 
-    // This item handler will hold our nine inventory slots
+    // This item handler will hold our twenty-seven inventory slots
     private ItemStackHandler itemStackHandler = new ItemStackHandler(SIZE) {
         @Override
         protected void onContentsChanged(int slot) {

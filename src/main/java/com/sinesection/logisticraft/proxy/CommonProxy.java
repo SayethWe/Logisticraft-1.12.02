@@ -5,6 +5,7 @@ import java.io.File;
 import com.sinesection.logisticraft.Logisticraft;
 import com.sinesection.logisticraft.config.Config;
 import com.sinesection.logisticraft.registrars.ModBlocks;
+import com.sinesection.logisticraft.registrars.ModTileEntities;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -41,6 +42,7 @@ public class CommonProxy {
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> e) {
 		ModBlocks.registerAll(e.getRegistry());
+		ModTileEntities.registerAll();
 	}
 	
 	@SubscribeEvent
